@@ -10,11 +10,11 @@ export default function Main() {
           placeholder="search for a country"
           className="shadow-2xl  px-6 py-2 active:outline-none focus:outline-none rounded-sm bg-white"
         />
-        <div className="relative border-2 border-black">
-          <button className="shadow-2xl hover:block bg-white py-2 px-4 text-sm">
+        <div className="relative  border-2 border-black">
+          <button className="shadow-2xl  bg-white py-2 px-4 text-sm">
             Filter by Region
           </button>
-          <div className="w-full px-10 h-max  border-2 border-black absolute ">
+          <div className=" w-full px-10 h-max  border-2 border-black absolute ">
             <ul className="w-full ">
               <li>Africa</li>
               <li>America</li>
