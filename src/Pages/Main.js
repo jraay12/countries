@@ -1,3 +1,9 @@
+import Header from "../Components/Header";
+
 export default function Main() {
-  return;
+  return (
+    <div className=" min-h-screen bg-VeryLightGray">
+      <Header />
+    </div>
+  );
 }
