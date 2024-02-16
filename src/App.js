@@ -1,7 +1,16 @@
+import Main from "./Pages/Main";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Route, Routes, Navigate } from "react-router-dom";
+
+const queryClient = new QueryClient();
+
 export default function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
+    <QueryClientProvider client={queryClient}>
+      <Routes>
+        <Route path="/" element={<Navigate to="/countries" />}></Route>
+        <Route path="/countries" element={<Main />} />
+      </Routes>
+    </QueryClientProvider>
+  );
 }
