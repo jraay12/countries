@@ -17,7 +17,7 @@ export default function Main() {
   return (
     <div className=" min-h-screen bg-VeryLightGray  select-none">
       <Header />
-      <section className="flex justify-between items-center px-10 mt-10 ">
+      <section className="flex flex-col table:flex-row justify-start items-start gap-10 table:gap-0 table:justify-between table:items-center px-10 mt-10 ">
         <input
           type="text"
           placeholder="search for a country"
