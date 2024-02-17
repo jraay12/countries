@@ -1,5 +1,6 @@
 import Header from "../Components/Header";
 import { useState, useEffect } from "react";
+import Card from "../Components/Card";
 export default function Main() {
   const [showDropdown, setShowDropdown] = useState(false);
   useEffect(() => {
@@ -38,6 +39,10 @@ export default function Main() {
             </div>
           )}
         </div>
+      </section>
+
+      <section className="px-10 py-10">
+        <Card />
       </section>
     </div>
   );
