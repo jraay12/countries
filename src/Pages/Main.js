@@ -1,7 +1,10 @@
 import Header from "../Components/Header";
 import { useState, useEffect } from "react";
 import Card from "../Components/Card";
+import { QueryCountry } from "../Api/axios";
 export default function Main() {
+  const { data } = QueryCountry();
+  console.log(data);
   const [showDropdown, setShowDropdown] = useState(false);
   useEffect(() => {
     setShowDropdown(false);
@@ -41,8 +44,18 @@ export default function Main() {
         </div>
       </section>
 
-      <section className="px-10 py-10">
-        <Card />
+      <section className="flex gap-20 justify-evenly max-w-full flex-wrap px-10 py-10">
+        {Array.isArray(data) &&
+          data.map((item, index) => (
+            <Card
+              key={index + 1}
+              image={item.flags.png}
+              country={item.name.common}
+              population={item.population}
+              region={item.region}
+              capital={item.capital}
+            />
+          ))}
       </section>
     </div>
   );
