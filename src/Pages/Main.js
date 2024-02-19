@@ -2,9 +2,10 @@ import Header from "../Components/Header";
 import { useState, useEffect } from "react";
 import Card from "../Components/Card";
 import { QueryCountry } from "../Api/axios";
+import { useNavigate } from "react-router-dom";
 export default function Main() {
   const { data } = QueryCountry();
-  console.log(data);
+  const navigate = useNavigate();
   const [showDropdown, setShowDropdown] = useState(false);
   useEffect(() => {
     setShowDropdown(false);
@@ -54,6 +55,7 @@ export default function Main() {
               population={item.population}
               region={item.region}
               capital={item.capital}
+              click={() => navigate(`/details/${item.name.common}`)}
             />
           ))}
       </section>

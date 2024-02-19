@@ -10,9 +10,8 @@ export default function App() {
     <QueryClientProvider client={queryClient}>
       <Routes>
         <Route path="/" element={<Navigate to="/countries" />}></Route>
-        <Route path="/countries" element={<Main />}>
-          <Route path="details" element={<CountryDetails />} />
-        </Route>
+        <Route path="/countries" element={<Main />}></Route>
+        <Route path="/details/:name" element={<CountryDetails />} />
       </Routes>
     </QueryClientProvider>
   );
