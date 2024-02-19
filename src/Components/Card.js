@@ -10,7 +10,7 @@ export default function Card({
 }) {
   return (
     <div
-      className="max-w-56 min-w-56 min-h-72 max-h-72 bg-white drop-shadow-lg"
+      className="max-w-56 min-w-56 min-h-72 max-h-72 bg-white drop-shadow-lg hover:cursor-pointer"
       key={key}
     >
       <section className="flex flex-col w-full ">
